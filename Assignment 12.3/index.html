@@ -1,0 +1,21 @@
+<!DOCTYPE httml>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+        <script>
+            var arr = [2, 4, 6];
+            function map(arr, callback) {//Creating a function called map
+                var ArrOut = new Array();// Creating a new array
+                for (var i = arr.length-1; i >= 0; i--)//Looping through the array
+                    ArrOut[i] = callback(arr[i]);//Calling the callback function for each array element
+                return ArrOut;
+            }
+                var arrReturned = map(arr, function(arg) {//Callback function execution
+                return arg*2;
+                });
+            console.log(arrReturned);
+        </script>
+    </body>
+</html>
